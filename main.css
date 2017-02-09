@@ -35,7 +35,8 @@ figure,
 pre,
 table,
 fieldset,
-hr {
+hr,
+.box {
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
@@ -51,6 +52,8 @@ h3 {
     h1 {
         font-weight: 700;
         font-variant-numeric: lining-nums;
+        font-size: 1.25rem;
+        line-height: 1.5em;
         -webkit-font-feature-settings: "lnum";
         -moz-font-feature-settings: "lnum";
         font-feature-settings: "lnum";
@@ -67,11 +70,6 @@ h3 {
         text-decoration: none;
     }
 
-h1 {
-    font-size: 1.25rem;
-    line-height: 1.5em;
-}
-
     h2 a {
         color: #ed6a5a;
     }
@@ -85,7 +83,8 @@ h2 + h3 {
     margin-top: 1.5rem;
 }
 
-h2 + .box {
+h2 + .box,
+h3 + .box {
     margin-top: 0.75rem;
 }
 
@@ -175,5 +174,9 @@ header {
     .box ol,
     .box ul {
         margin: 0;
+    }
+
+    .box--small {
+        padding: 0.75rem;
     }
 
