@@ -123,6 +123,10 @@ li::before {
     opacity: 0.5;
 }
 
+pre {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
 section {
     margin-bottom: 3rem;
 }
@@ -133,6 +137,32 @@ header {
     margin: -3rem;
     padding-bottom: 0;
     margin-bottom: 3rem;
+}
+
+table {
+    font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 1px solid #e6ebe0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table pre {
+        margin: 0;
+    }
+
+th {
+    background-color: #f8f9f6;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #e6ebe0;
+}
+
+col:nth-child(1) {
+    width: 4rem;
 }
 
 .container {
