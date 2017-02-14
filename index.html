@@ -1,150 +1,209 @@
 <!doctype html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-		<title>CSE 320: Programming Languages &mdash; CSUSB School of Computer Science and Engineering</title>
+    <head>
+        <meta charset="utf-8">
+        <title>CSE 320: Programming Languages &mdash; CSUSB School of Computer Science and Engineering</title>
 
-		<script src="https://use.typekit.net/frx0okb.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script src="https://use.typekit.net/frx0okb.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-		<link href="normalize.css" rel="stylesheet">
-		<link href="main.css" rel="stylesheet">
-	</head>
-	<body>
-		<div class="container">
-			<div class="container-content">
-				<div class="main">
-					<header>
-						<h1>CSE 320: Programming Languages <span>School of Computer Science and Engineering</span> <span>CSU San Bernardino</span></h1>
+        <link href="normalize.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-content">
+                <div class="main">
+                    <header>
+                        <h1>CSE 320: Programming Languages <span>CSUSB School of Computer Science and Engineering</span></h1>
 
-						<p class="intro">This is the course website for CSE 320 at <a href="https://csusb.edu">CSUSB</a>, taught by <a href="http://andrewbrinker.com">Andrew&nbsp;Brinker</a> in spring quarter of the 2016-2017 academic year.</p>
+                        <p class="intro">This is the course website for CSE 320 at <a href="https://csusb.edu">CSUSB</a>, taught by <a href="http://andrewbrinker.com">Andrew&nbsp;Brinker</a> in spring quarter of the 2016-2017 academic year.</p>
 
-						<section id="table-of-contents" class="box">
-							<ol>
-								<li><a href="#table-of-contents">Table of Contents</a></li>
-								<li><a href="#meeting-times">Meeting Times</a></li>
-								<li><a href="#syllabus">Syllabus</a></li>
-								<li>
-									<a href="#materials">Materials</a>
-									<ol>
-										<li><a href="#required-materials">Required Materials</a></li>
-										<li><a href="#optional-materials">Optional Materials</a></li>
-										<li><a href="#advanced-materials">Advanced Materials</a></li>
-									</ol>
-								</li>
-								<li><a href="#structure">Structure</a></li>
-								<li>
+                        <div id="table-of-contents" class="box">
+                            <ol>
+                                <li><a href="#table-of-contents">Table of Contents</a></li>
+                                <li><a href="#meeting-times">Meeting Times</a></li>
+                                <li><a href="#syllabus">Syllabus</a></li>
+                                <li>
+                                    <a href="#materials">Materials</a>
+                                    <ol>
+                                        <li><a href="#required-materials">Required Materials</a></li>
+                                        <li><a href="#optional-materials">Optional Materials</a></li>
+                                        <li><a href="#advanced-materials">Advanced Materials</a></li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <a href="#structure">Structure</a>
+                                    <ol>
+                                        <li><a href="#class-component">Class Component</a></li>
+                                        <li><a href="#lab-component">Lab Component</a></li>
+                                    </ol>
+                                </li>
+                                <li>
                                     <a href="#grading">Grading</a>
                                     <ol>
                                         <li><a href="#point-breakdown">Point Breakdown</a></li>
                                         <li><a href="#late-work">Late Work</a></li>
                                     </ol>
                                 </li>
-							</ol>
-						</section>
-					</header>
+                                <li>
+                                    <a href="#labs">Labs</a>
+                                    <ol>
+                                        <li><a href="#organization">Organization</a></li>
+                                        <li><a href="#languages-in-the-lab">Languages in the Lab</a></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </header>
 
-					<section id="meeting-times">
-						<h2><a href="#meeting-times">Meeting Times</a></h2>
-						<p>Classes are held every Tuesday and Thursday from <time>4:00pm</time> to <time>5:15pm</time>. Labs are held every Thursday from <time>5:30pm</time> to <time>7:20pm</time>.</p>
-					</section>
+                    <section id="meeting-times">
+                        <h2><a href="#meeting-times">Meeting Times</a></h2>
 
-					<section id="syllabus">
-						<h2><a href="#syllabus">Syllabus</a></h2>
+                        <div class="content">
+                            <p>Classes are held every Tuesday and Thursday from <time>4:00pm<time> to <time>5:15pm</time>. Labs are held every Thursday from <time>5:30pm</time> to <time>7:20pm</time>.</p>
+                                    <p>Attendance is expected at all class sessions. Every class session except for the first and the last will begin with a quiz based on the reading assigned after the previous class session. These quizzes are worth 90 out of the 500 total points in the class. This is 18% of the grade. Missing these quizzes can result in a substantial reduction in your final grade.</p>
+                                </div>
+                            </section>
 
-						<div class="box box--small">
-							<p>The syllabus will be posted soon.</p>
-						</div>
-					</section>
+                            <section id="syllabus">
+                                <h2><a href="#syllabus">Syllabus</a></h2>
 
-					<section id="materials">
-						<h2><a href="#materials">Materials</a></h2>
+                                <div class="content">
+                                    <div class="box box--small">
+                                        <p>The syllabus will be posted soon.</p>
+                                    </div>
+                                </div>
+                            </section>
 
-						<h3 id="required-materials"><a href="#required-materials">Required Materials</a></h3>
+                            <section id="materials">
+                                <h2><a href="#materials">Materials</a></h2>
 
-						<p>This course requires the second edition of <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">&ldquo;Programming Languages: Application and Interpretation&rdquo;</a> by <a href="http://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. This book is available for free online in both <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Portable Document Format">PDF</abbr> formats, and need not be purchased, although students may purchase it if they want to do so.</p>
+                                <div class="content">
 
-						<p>Before each class, be sure to read any assigned chapters of the book, as well as any additional materials included in the syllabus.</p>
+                                    <h3 id="required-materials"><a href="#required-materials">Required Materials</a></h3>
+
+                                    <p>This course requires the second edition of <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">&ldquo;Programming Languages: Application and Interpretation&rdquo;</a> by <a href="http://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. This book is available for free online in both <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Portable Document Format">PDF</abbr> formats, and need not be purchased, although students may purchase it if they want to do so.</p>
+
+                                    <p>Before each class, be sure to read any assigned chapters of the book, as well as any additional materials included in the syllabus.</p>
 
 
-						<h3 id="optional-materials"><a href="#optional-materials">Optional Materials</a></h3>
+                                    <h3 id="optional-materials"><a href="#optional-materials">Optional Materials</a></h3>
 
-						<p>Each pre-course reading will include optional materials. Questions from these optional materials will be included for extra points in the quiz given at the start of each class session.</p>
+                                    <p>Each pre-course reading will include optional materials. Questions from these optional materials will be included for extra points in the quiz given at the start of each class session.</p>
 
-						<h3 id="advanced-materials"><a href="#advanced-materials">Advanced Materials</a></h3>
+                                    <h3 id="advanced-materials"><a href="#advanced-materials">Advanced Materials</a></h3>
 
-						<p>Some pre-course reading will include links or suggestions for further exploration into the topic at hand. These are entirely for your own personal edification, and will not be required for use in the course.</p>
-					</section>
+                                    <p>Some pre-course reading will include links or suggestions for further exploration into the topic at hand. These are entirely for your own personal edification, and will not be required for use in the course.</p>
 
-					<section id="structure">
-						<h2><a href="#structure">Structure</a></h2>
+                                </div>
+                            </section>
 
-						<p>This course is organized into two components, a class component and a lab component. The class component will serve to enable discussion and exploration of the topics covered in reading. To do well in this class, <em>you must do the assigned reading</em>. Students who arrive to class without having done the reading will likely find themselves struggling.</p>
-						<p>Each class session will begin with a quiz whose questions are based on the information covered in the reading assigned after the previous class session. Each quiz will additionally have questions based on any optional reading, for extra points. See the <a href="#grading">Grading</a> section for more information on how these quizzes are graded, and how that grade contributes to your final grade in the course.</p>
-						<p>The lab component will serve to introduce you to a variety of programming languages, to provide practical knowledge about different languages, their underlying paradigms, and how the different decisions the language designers make influence the resulting language.
-						</section>
+                            <section id="structure">
+                                <h2><a href="#structure">Structure</a></h2>
 
-						<section id="grading">
-							<h2><a href="#grading">Grading</a></h2>
+                                <div class="content">
 
-                            <h3 id="point-breakdown"><a href="#point-breakdown">Point Breakdown</a></h3>
+                                    <p>This course is organized into two components, a class component and a lab component.</p>
 
-							<p>There are a total of 500 points available in this course. Your final grade is based solely on how many points out of 500 you have received. The letter grade breakdown is as follows.</p>
+                                    <h3 id="class-component"><a href="#class-component">Class Component</a></h3>
 
-							<table>
-                                <col><col>
-								<tr>
-									<th>Grade</th>
-									<th>Percent Range</th>
-                                    <th>Point Range</th>
-								</tr>
-								<tr>
-									<td>A</td>
-									<td><pre>[90%, 100%]</pre></td>
-									<td><pre>[450, 500]</pre></td>
-								</tr>
-								<tr>
-									<td>B</td>
-									<td><pre>[80%, 90%)</pre></td>
-									<td><pre>[400, 450)</pre></td>
-								</tr>
-								<tr>
-									<td>C</td>
-									<td><pre>[70%, 80%)</pre></td>
-									<td><pre>[350, 400)</pre></td>
-								</tr>
-								<tr>
-									<td>D</td>
-									<td><pre>[60%, 70%)</pre></td>
-									<td><pre>[300, 350)</pre></td>
-								</tr>
-								<tr>
-									<td>F</td>
-									<td><pre>[0%, 60%)</pre></td>
-									<td><pre>[0, 300)</pre></td>
-								</tr>
-							</table>
+                                    <p>The class component will serve to enable discussion and exploration of the topics covered in reading. To do well in this class, <em>you must do the assigned reading</em>. Students who arrive to class without having done the reading will likely find themselves struggling.</p>
+                                    <p>Each class session will begin with a quiz whose questions are based on the information covered in the reading assigned after the previous class session. Each quiz will additionally have questions based on any optional reading, for extra points. See the <a href="#grading">Grading</a> section for more information on how these quizzes are graded, and how that grade contributes to your final grade in the course.</p>
 
-							<h3>Late Work</h3>
-							<p>Late work is not generally accepted. If special circumstances prevent you from doing an assignment, please contact me promptly so we can discuss potential solutions.</p>
-						</section>
-					</div>
-					<aside class="sidebar">
-						<h3 id="current-assignment"><a href="#current-assignment">Current Assignment</a></h3>
-						<p>Read the syllabus before the first class.</p>
+                                    <h3 id="lab-component"><a href="#lab-component">Lab Component</a></h3>
 
-						<h3 id="upcoming-due-dates"><a href="#upcoming-due-dates">Upcoming Due Dates</a></h3>
-						<div class="box box--small">
-							<p>The due dates will be posted soon.</p>
-						</div>
+                                    <p>The lab component will serve to introduce you to a variety of programming languages, to provide practical knowledge about different languages, their underlying paradigms, and how the different decisions the language designers make influence the resulting language.
+                                    </div>
+                                </section>
 
-						<h3 id="current-grades"><a href="#current-grades">Current Grades</a></h3>
-						<div class="box box--small">
-							<p>Current grades will be posted soon.</p>
-						</div>
+                                <section id="grading">
+                                    <h2><a href="#grading">Grading</a></h2>
 
-					</aside>
-				</div>
-			</div>
-		</body>
-	</html>
+                                    <div class="content">
+
+                                        <h3 id="point-breakdown"><a href="#point-breakdown">Point Breakdown</a></h3>
+
+                                        <p>There are a total of 500 points available in this course. Your final grade is based solely on how many points out of 500 you have received. The letter grade breakdown is as follows.</p>
+
+                                        <table>
+                                            <col><col>
+                                            <tr>
+                                                <th>Grade</th>
+                                                <th>Percent Range</th>
+                                                <th>Point Range</th>
+                                            </tr>
+                                            <tr>
+                                                <td>A</td>
+                                    <td><pre>[90%, 100%]</pre></td>
+                                    <td><pre>[450, 500]</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td><pre>[80%, 90%)</pre></td>
+                                    <td><pre>[400, 450)</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td><pre>[70%, 80%)</pre></td>
+                                    <td><pre>[350, 400)</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td><pre>[60%, 70%)</pre></td>
+                                    <td><pre>[300, 350)</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td><pre>[0%, 60%)</pre></td>
+                                    <td><pre>[0, 300)</pre></td>
+                                </tr>
+                            </table>
+
+                            <h3>Late Work</h3>
+                            <p>Late work is not generally accepted. If special circumstances prevent you from doing an assignment, please contact me promptly so we can discuss potential solutions.</p>
+                        </div>
+                    </section>
+
+                    <section id="labs">
+                        <h2><a href="#labs">Labs</a></h2>
+
+                        <div class="content">
+
+                            <h3 id="Organization"><a href="#organization">Organization</a></h3>
+
+                            <p>Labs in this class will consist of a series of exercises or a programming assignment in one of the <a href="#languages-in-the-lab">four languages being used in the lab</a>. These labs are designed to be reasonably completed within the hour and fifty minutes alloted. For students who finish with extra time and want to explore the languages in question further, additional resources or exercises will often be provided.</p>
+                            <p>Lab time is a time for experimentation, discovery, and question-asking (both of yourself and of me). The best way to discover the workings of a programming language is to write in it, and so I highly recommend a sense of playfulness during lab sessions. I will be available for questions, and if more than one or two students has the same question I am happy to answer those questions for the edification of the rest of the students.</p>
+
+                            <h3 id="languages-in-the-lab"><a href="#languages-in-the-lab">Languages in the Lab</a></h3>
+
+                            <p>The lab is organized into four segments, each using a particular language. These languages were chosen because they best typify the core concepts of the programming paradigm they represent. One of the goals of this course is to combat language monoculture. If you as a programmer only use one language, you are only exposed to one way of thinking. The languages we use (whether speaking or programming) shape the ideas we consider and express. Learning more than one programming language is akin to learning more than one spoken language. In doing so, you help to broaden yourself with new perspectives and ways of thinking.</p>
+                            <p>In these labs we will be using <em>Haskell</em> (to represent functional programming), <em>Rust</em> (to represent structured programming), <em>Java</em> (to represent object-oriented programming), and <em>Prolog</em> (to represent logic programming). These languages are all quite different, and there is enough nuance in each to fill multiple classes. So we will only be spending a few weeks with each language. It is not expected that you become a strong programmer in each of these languages. Rather, the hope is that the exposure you receive to these languages will pay dividends in improving your understanding of and facility with programming overall. If you happen to like one or more of these languages, and want to explore them further on your own time, do.</p>
+                        </div>
+                    </section>
+                </div>
+                <aside class="sidebar">
+                    <h3 id="current-assignment"><a href="#current-assignment">Current Assignment</a></h3>
+                    <p>Read the syllabus before the first class.</p>
+
+                    <h3 id="upcoming-due-dates"><a href="#upcoming-due-dates">Upcoming Due Dates</a></h3>
+                    <div class="box box--small">
+                        <p>The due dates will be posted soon.</p>
+                    </div>
+
+                    <h3 id="current-grades"><a href="#current-grades">Current Grades</a></h3>
+                    <div class="box box--small">
+                        <p>Current grades will be posted soon.</p>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
