@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: "ff-tisa-web-pro", Georgia, "Times New Roman", Times, serif;
+    font-family: "skolar-latin", "ff-tisa-web-pro", Georgia, "Times New Roman", Times, serif;
 	color: #222;
     background-color: #e6ebe0;
 
@@ -18,6 +18,9 @@ body {
     -moz-font-feature-settings: "kern";
     -webkit-font-feature-settings: "kern";
     font-feature-settings: "kern";
+
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -44,21 +47,21 @@ hr,
 h1,
 h2,
 h3 {
-    font-family: "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "skolar-sans-latin", "ff-tisa-sans-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5em;
 }
 
-    h1 {
-        font-weight: 700;
-        font-variant-numeric: lining-nums;
-        font-size: 1.25rem;
-        line-height: 1.5em;
-        -webkit-font-feature-settings: "lnum";
-        -moz-font-feature-settings: "lnum";
-        font-feature-settings: "lnum";
-        color: #000;
-    }
+h1 {
+    font-weight: 700;
+    font-variant-numeric: lining-nums;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    -webkit-font-feature-settings: "lnum";
+    -moz-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+    color: #000;
+}
 
     h1 span {
         display: block;
@@ -80,14 +83,8 @@ h3 {
         color: #ed6a5a;
     }
 
-h2,
 h3 {
     margin-bottom: 0;
-}
-
-h2 + h3,
-h2 + .content h3 {
-    margin-top: 1.5rem;
 }
 
 h2 + .box,
@@ -116,18 +113,28 @@ abbr[title] {
 ol {
     counter-reset: section;
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 1.25rem;
 }
 
 ol ol {
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+}
+
+li {
+    position: relative;
 }
 
 li::before {
     counter-increment: section;
-    content: counters(section, ".") " ";
-    padding-right: 0.25rem;
+    content: counters(section, ".") ".";
     opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: -1.25rem;
+}
+
+li li::before {
+    left: -2rem;
 }
 
 pre {
@@ -138,12 +145,19 @@ section {
     margin-bottom: 3rem;
 }
 
-header {
+header,
+section {
     border-bottom: 1px solid #e6ebe0;
     padding: 3rem;
     margin: -3rem;
-    padding-bottom: 0;
+    padding-bottom: 1.5rem;
     margin-bottom: 3rem;
+}
+
+section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
 }
 
 table {
@@ -200,10 +214,9 @@ col:nth-child(1) {
     }
 
 .box {
-    display: inline-block;
-    background-color: #f8f9f6;
+	display: inline-block;
+    background-color: #fff;
     border: 1px solid #e6ebe0;
-    width: fit-content;
     padding: 1.5rem;
 }
 
