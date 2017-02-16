@@ -139,7 +139,7 @@ li {
     position: relative;
 }
 
-li::before {
+ol li::before {
     counter-increment: section;
     content: counters(section, ".") ".";
     opacity: 0.5;
@@ -148,7 +148,7 @@ li::before {
     left: -1.25rem;
 }
 
-li li::before {
+ol li li::before {
     left: -2rem;
 }
 
