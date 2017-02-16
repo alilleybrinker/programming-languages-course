@@ -1,17 +1,17 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 110%;
+    font-size: 110%;
     line-height: 1.5em;
 }
 
 body {
     font-family: "skolar-sans-latin", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #222;
+    color: #222;
     background-color: #e6ebe0;
 
     font-kerning: normal;
@@ -192,7 +192,7 @@ col:nth-child(1) {
 
 .container {
     background-color: #fff;
-	margin: 0;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
