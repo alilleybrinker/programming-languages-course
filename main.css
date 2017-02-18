@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 110%;
+    font-size: 100%;
     line-height: 1.5em;
 }
 
@@ -192,10 +192,14 @@ col:nth-child(1) {
 
 .container {
     background-color: #fff;
-    margin: 0;
+    margin: 3rem auto;
+
+    max-width: 70rem;
 
     display: flex;
     flex-direction: column;
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
     .container-content {
@@ -208,9 +212,7 @@ col:nth-child(1) {
     }
 
         .main-content {
-            width: 34rem;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            margin: 3rem;
         }
 
     .sidebar {
