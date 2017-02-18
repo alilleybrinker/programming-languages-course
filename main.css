@@ -250,3 +250,7 @@ col:nth-child(1) {
     column-gap: 1.5rem;
 }
 
+.toc.columns {
+    max-height: 30rem;
+}
+
