@@ -254,3 +254,14 @@ col:nth-child(1) {
     max-height: 30rem;
 }
 
+.attention {
+    background-color: #fff;
+    border: 1px solid hsla(0, 0%, 0%, 0.15);
+    padding: 1.5rem 1.5rem 0.15rem 1.5rem;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+    .attention h3 a {
+        color: rgb(237, 106, 90);
+    }
+
