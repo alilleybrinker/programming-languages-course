@@ -261,9 +261,12 @@ col:nth-child(1) {
     margin: 0 -1.5rem 1.5rem -1.5rem;
 }
 
+    .attention h3 {
+        margin-bottom: 0.5rem;
+    }
+
     .attention h3 a {
         color: rgb(237, 106, 90);
-        margin-bottom: 0.25rem;
     }
 
     .attention:first-child {
