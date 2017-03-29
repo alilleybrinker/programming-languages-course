@@ -269,10 +269,6 @@ col:nth-child(1) {
         color: rgb(237, 106, 90);
     }
 
-    .attention:first-child {
-        margin-top: -1.5rem;
-    }
-
 .compact th,
 .compact td {
     padding: 0.5rem 1rem;
