@@ -1,0 +1,244 @@
+---
+layout: default
+title: "Lab 1: Functions"
+---
+
+<h1>Lab #1: Functions</h1>
+
+<p>This lab is intended to introduce you to the Haskell programming language, and to some key ideas about the structuring of data, and the power of functions. This lab is intended to be completable within two hours of lab time, and the products of this lab <em>must</em> be submitted for review and credit before the end of that time.</p>
+
+<p>If at any point you find something confusing, feel free to ask questions about it.</p>
+
+<h2>Introduction</h2>
+
+<p>Haskell is a “functional” programming language. There is some disagreement about what exactly this means, but there are a few criteria we can use to understand the term. Functional languages:</p>
+
+<ul>
+<li>Tend to focus on functions as the basic unit of program construction.</li>
+<li>Tend to prefer the elimination of explicitly managed program <em>state</em>.</li>
+</ul>
+
+<p>Haskell fits both of these definitions, and so we call it a functional programming language. This is not terribly important, as every language even within a particular programming paradigm will do things in its own way, but it does help us to communicate at least a basic sense of what to expect when you hear the term used.</p>
+
+<h2>Basic Haskell Types</h2>
+
+<p>Haskell comes equipped with a collection of standard types, which are similar to the types you would expect to get from other programming languages. They are:</p>
+
+<ul>
+<li><code>Bool</code>, which can be <code>False</code> or <code>True</code> (this is case-sensitive, and we’ll get to why they’re capitalized later in this lab).</li>
+<li><code>Char</code>, which represents a single Unicode code points (“code point” is a very specific term from the Unicode standard. For our purposes, we’ll pretend it’s equivalent to “character,” although this isn’t exactly accurate. Feel free to read more on your own.)</li>
+<li><code>String</code>, which is an alias for <code>[Char]</code> (meaning a list of <code>Char</code>s). <code>String</code> is the basic text type in Haskell, written <code>&quot;like so&quot;</code>, and it’s what we’ll use for our programs. Note that <code>String</code> is <em>not</em> a particularly good string representation, and that there are other types which should be used in real Haskell programs.</li>
+<li>Lists, which you’ve just seen, written <code>[1, 2, 3, 4]</code>. They can contain any number of items of the same type.</li>
+<li>Tuples, which are written like so: <code>('a', &quot;Hello&quot;, 5)</code>. They can contain any number of items of different types.</li>
+<li>Unit, or the empty tuple, written <code>()</code>. This is often used in Haskell to mean “no type.”</li>
+<li><code>Integer</code>, for arbitrary-precision integers. This means the <code>Integer</code> type can represent <em>all</em> integers, no matter how big they are.</li>
+<li><code>Int</code>, for fixed-precision integers of width <code>[-2^(229), 2^(229 - 1)]</code>.</li>
+<li><code>Float</code>, for single-precision floating point numbers.</li>
+<li><code>Double</code>, for double-precision floating point numbers.</li>
+</ul>
+
+<p>To try out these types, open the Glasgow Haskell Compiler Interpreter with the <code>ghci</code> command, and try some basic operations with these types. Feel free to ask questions, and experiment with operations on different types together. See what sort of messages you get from the compiler.</p>
+
+<h2>How to Define a Function</h2>
+
+<p>Functions in Haskell are defined like so:</p>
+
+<pre><code class="Haskell">addTwo x = x + 2
+</code></pre>
+
+<p>This defines a function that takes in a number, adds two to it, and returns the result.</p>
+
+<p>Haskell can automatically determine (“infer”) almost all types in a program, but it is considered good practice to write the types of functions anyway. This is done like so:</p>
+
+<pre><code class="Haskell">addTwo :: Integer -&gt; Integer
+addTwo x = x + 2
+</code></pre>
+
+<p>This syntax may seem weird, but it means that <code>addTwo</code> is a function taking in a single value of type <code>Integer</code>, and returning a value of type <code>Integer</code>.</p>
+
+<p>A more complex function may look like this:</p>
+
+<pre><code class="Haskell">addSomething :: Integer -&gt; Integer -&gt; Integer
+addSomething x n = x + n
+</code></pre>
+
+<p>Notice that Haskell’s syntax makes no distinction between input types and outputs types, other than position. This is very important for understanding how Haskell works.</p>
+
+<h3>Currying</h3>
+
+<p><em>Currying</em> is the idea that every function with multiple inputs can be turned into a series of functions with one input each. Take for example the following C++ code:</p>
+
+<pre><code class="cpp">int doSomeMath(int x, int y, int z) {
+    // does some math
+}
+</code></pre>
+
+<p>Compare it to this C++ code:</p>
+
+<pre><code class="cpp">int doSomeMath(int x) {
+    return |int y| {
+        return |int z| {
+            // do some math
+        }
+    }
+}
+</code></pre>
+
+<p>The first function defines a single function that takes in three inputs and returns some output. The second function defines a single function that takes in one input, and returns a function with takes in one input, which returns a function that takes in one input and returns some output. Are these things really that different?</p>
+
+<p>It’s a little hard to see in C++’s syntax, but these two things aren’t that different in theory! Here’s the same idea in Haskell:</p>
+
+<pre><code class="Haskell">doSomeMath x y z = …
+</code></pre>
+
+<p>Compared to:</p>
+
+<pre><code class="Haskell">doSomeMath x = (\y = (\z = …))
+</code></pre>
+
+<p>This may still be a little crazy. Let’s look at some more ideas, and see if we can understand it better.</p>
+
+<h3>Higher-Order Functions</h3>
+
+<p>Did you know you can write functions that take other functions as parameters? These are called “higher-order functions” (a big name that we probably shouldn’t use, and which makes the whole idea more confusing than it needs to be).</p>
+
+<p>Let’s look at an example:</p>
+
+<pre><code class="Haskell">addWith :: (Integer -&gt; Integer) -&gt; Integer -&gt; Integer
+addWith f x = (f x) + 1
+</code></pre>
+
+<p>This strange-looking function takes in a function and an integer. It applies the function to the integer, and then adds one to the result. You can use it like this:</p>
+
+<pre><code class="Haskell">multiplyByTwo :: Integer -&gt; Integer
+multiplyByTwo x = x * 2
+
+addWith (multiplyByTwo) 5
+</code></pre>
+
+<p>And the result will be <code>(5 * 2) + 1</code>, resulting in an output of <code>11</code>!</p>
+
+<p>These are higher-order functions!</p>
+
+<p><strong>Write your own higher-order functions. Come up with five higher-order functions, and put them in a <code>.hs</code> file. Save these for review at the end of the lab.</strong></p>
+
+<h3>Returning Functions From Functions</h3>
+
+<p>You can also write functions that return other functions! Here’s an example:</p>
+
+<pre><code class="Haskell">getAdder :: Integer -&gt; (Integer -&gt; Integer)
+getAdder x = (\y = x + y)
+</code></pre>
+
+<p>This function, <code>getAdder</code>, takes in an <code>Integer</code>, and returns a function that takes in an <code>Integer</code> and adds that <code>Integer</code> to the integer passed to <code>getAdder</code>… maybe it’s clearer with an example:</p>
+
+<pre><code class="Haskell">add10 :: Integer -&gt; Integer
+add10 = getAdder 10
+
+fifteen = add10 + 5
+</code></pre>
+
+<p><code>add10</code> is a function that takes in an <code>Integer</code> and adds <code>10</code> to it, returning an <code>Integer</code>! Note that the type of <code>add10</code> is exactly the return type of <code>getAdder</code>! When you call <code>getAdder</code>, the value of <code>x</code> is filled out in the body of the function, and the inner function is returned! This inner function takes in an <code>Integer</code> named <code>y</code>, adds <code>10</code> to it, and returns the result.</p>
+
+<p><strong>Write your own functions that return functions. Come up with five of them, and put them in a <code>.hs</code> file. Save these for review at the end of the lab.</strong></p>
+
+<h3>Partial Application</h3>
+
+<p>This is all great, but it seems like a lot of work. Is there an easier way? Yes! There is! Haskell includes a feature called “partial application,” meaning that if you have a function with multiple parameters, and don’t pass in values for all of them, you get back the same function with just those values filled in. Let’s try the adder example again, but with partial application:</p>
+
+<pre><code class="Haskell">getAdder :: Integer -&gt; Integer -&gt; Integer
+getAdder x y = x + y
+
+add10 :: Integer -&gt; Integer
+add10 = getAdder 10
+
+fifteen :: Integer
+fifteen = add10 5
+</code></pre>
+
+<p>Look at that! By giving only one parameter to <code>getAdder</code>, even though it takes two parameters, we got back <code>getAdder</code> with that first parameter filled in! This is a really powerful feature of Haskell’s, and also happens to be based on the insight of currying (see? I said we’d come back to currying!). It’s thanks to the idea of currying, the idea that a function of many parameters is the same as many functions with one parameter each, that we can <em>do</em> partial application at all! The theory is useful!</p>
+
+<p><strong>Write some examples of partial application. Come up with five of them, and put them in a <code>.hs</code> file. Save these for review at the end of the lab.</strong></p>
+
+<h2>Defining Your Own Types</h2>
+
+<p>So, now that we understand a bit about how functions work in Haskell, let’s talk about how data types work. Data types in Haskell are called “algebraic data types.” The term “algebraic” may suggest that you can do math with them, and you’re right! In Haskell there are both “product types” and “sum types,” which we’ll talk about now.</p>
+
+<h3>Sum Types</h3>
+
+<p>You’ve actually already met the most common sum types in Haskell: <code>Bool</code>! In Haskell, <code>Bool</code> is defined like so:</p>
+
+<pre><code class="Haskell">data Bool = False | True
+</code></pre>
+
+<p>This says that the data type <code>Bool</code> can be <em>either</em> <code>False</code> <em>or</em> <code>True</code>. It’s this “either” that makes the type a sum type. Sum types define a collection of potential values. Think of something kinda like an <code>enum</code> from C++.</p>
+
+<p>These types can also hold data. For example, Haskell has a very useful type called <code>Maybe</code> that is defined like this:</p>
+
+<pre><code class="Haskell">data Maybe a = Nothing | Just a
+</code></pre>
+
+<p>The <code>a</code> is a placeholder for a type. It means that <code>Maybe</code> is always either <code>Nothing</code> (and contains no data), or <code>Just a</code>, meaning a single value of some type.</p>
+
+<p>You can also have sum types with only one possibility, like this:</p>
+
+<pre><code class="Haskell">data Void = Void
+</code></pre>
+
+<p>This means that there is a type <code>Void</code> with only one constructor, also called <code>Void</code>.</p>
+
+<p>That’s right! Those things on the right side of the equals sign are actually constructors! You’ve been defining functions this whole time! If you were to look at the type of <code>True</code>, it’d look like <code>True :: Bool</code>, which you can think this as saying that <code>True</code> has the type <code>Bool</code>, <em>or</em> that <code>True</code> is a <em>function</em> that takes in no parameter and returns a value of type <code>Bool</code>.</p>
+
+<p>This is clearer with <code>Just</code>, which has a type like <code>Just :: a -&gt; Maybe a</code> (once again, <code>a</code> is a placeholder for an arbitrary type). This makes it obvious that <code>Just</code> is a function, which takes in a value of some type, and returns a value of type <code>Maybe a</code> (meaning a <code>Maybe</code> containing a value of some arbitrary type).</p>
+
+<h3>Product Types</h3>
+
+<p>Haskell also has product types, which are the complement to sum types. They look like this:</p>
+
+<pre><code class="Haskell">data Pair = P Integer Double
+</code></pre>
+
+<p>That’s right! You’ve already seen these! Product types are just types collected together, like the <code>Integer</code> and <code>Double</code> in this example. You can read them as saying that a <code>Pair</code> is an <code>Integer</code> <em>and</em> and <code>Double</code>, together (contrast this to sum types, which are joined with an <em>or</em>, not an <em>and</em>).</p>
+
+<p>Think of product types like <code>struct</code>s in C++. A bunch of fields grouped together.</p>
+
+<p><strong>Write some types of your own! Can they have more than one type parameter? Can they have a concrete type? What can you do? Come up with ten of them, and put them in a <code>.hs</code> file. Save these for review at the end of the lab.</strong></p>
+
+<h3>Pattern Matching</h3>
+
+<p>With all of this, you may be wondering how you access the contents of these types. The answer is pattern matching!</p>
+
+<p>Take a function like this:</p>
+
+<pre><code class="Haskell">doListStuff :: [a] -&gt; Integer
+doListStuff list = case list of
+                       [] -&gt; 0
+                       x  -&gt; 1
+</code></pre>
+
+<p>This function is matching on the <em>pattern</em>, or <em>structure</em>, of <code>list</code>. If <code>list</code> is empty (denoted by <code>[]</code>), the function returns <code>0</code>. If <code>list</code> isn’t empty, the function returns <code>1</code>.</p>
+
+<p>This pattern is so common, Haskell actually provides a shorthand for it!</p>
+
+<pre><code class="Haskell">doListStuff :: [a] -&gt; Integer
+doListStuff [] = 0
+doListStuff list = 1
+</code></pre>
+
+<p>This means the same thing as the earlier function, but with a lot less typing.</p>
+
+<p>Applying this idea to <code>Maybe</code>, we can do something like this:</p>
+
+<pre><code class="Haskell">doMaybeStuff :: Maybe Integer -&gt; Integer
+doMaybeStuff Nothing = 0
+doMaybeStuff Just x = x + 1
+</code></pre>
+
+<p>This function pattern matches on the contents of the <code>Maybe Integer</code> input. If the <code>Maybe</code> is of the <code>Nothing</code> variant, the function returns <code>0</code>. If it’s of the <code>Just</code> variant, the function extracts the contained value, adds <code>1</code> to it, and returns the result. This is pattern matching!</p>
+
+<p><strong>Do some pattern matching of your own! What can you do? Come up with five uses of pattern matching, and put them in a <code>.hs</code> file. Save these for review at the end of the lab.</strong></p>
+
+<h2>Conclusion</h2>
+
+<p>That’s it for today’s lab! When you’re done, let the professor know so he can take a look at your work and give you a grade.</p>
+

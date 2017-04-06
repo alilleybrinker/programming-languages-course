@@ -280,3 +280,12 @@ col:nth-child(1) {
     font-weight: 700;
 }
 
+pre,
+code {
+    background-color: hsla(0, 0%, 95%, 1);
+}
+
+pre {
+    padding: 1.5rem;
+}
+
