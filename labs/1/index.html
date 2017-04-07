@@ -135,7 +135,7 @@ getAdder x = (\y = x + y)
 <pre><code class="Haskell">add10 :: Integer -&gt; Integer
 add10 = getAdder 10
 
-fifteen = add10 + 5
+fifteen = add10 5
 </code></pre>
 
 <p><code>add10</code> is a function that takes in an <code>Integer</code> and adds <code>10</code> to it, returning an <code>Integer</code>! Note that the type of <code>add10</code> is exactly the return type of <code>getAdder</code>! When you call <code>getAdder</code>, the value of <code>x</code> is filled out in the body of the function, and the inner function is returned! This inner function takes in an <code>Integer</code> named <code>y</code>, adds <code>10</code> to it, and returns the result.</p>
