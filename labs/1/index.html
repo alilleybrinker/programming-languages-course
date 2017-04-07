@@ -93,7 +93,7 @@ addSomething x n = x + n
 
 <p>Compared to:</p>
 
-<pre><code class="Haskell">doSomeMath x = (\y = (\z = …))
+<pre><code class="Haskell">doSomeMath x = (\y -&gt; (\z -&gt; …))
 </code></pre>
 
 <p>This may still be a little crazy. Let’s look at some more ideas, and see if we can understand it better.</p>
@@ -127,7 +127,7 @@ addWith (multiplyByTwo) 5
 <p>You can also write functions that return other functions! Here’s an example:</p>
 
 <pre><code class="Haskell">getAdder :: Integer -&gt; (Integer -&gt; Integer)
-getAdder x = (\y = x + y)
+getAdder x = (\y -&gt; x + y)
 </code></pre>
 
 <p>This function, <code>getAdder</code>, takes in an <code>Integer</code>, and returns a function that takes in an <code>Integer</code> and adds that <code>Integer</code> to the integer passed to <code>getAdder</code>… maybe it’s clearer with an example:</p>
