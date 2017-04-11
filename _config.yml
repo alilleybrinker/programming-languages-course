@@ -17,7 +17,7 @@ title: "CSE 320: Programming Languages"
 description: > # this means to ignore newlines until "baseurl:"
   This is the site for 'CSE 320: Programming Languages' at CSU, San Bernardino,
   as taught by Andrew Brinker in the spring quarter of the 2016–2017 academic year.
-baseurl: "/cse320"
+baseurl: ""
 url: "http://andrewbrinker.github.io"
 exclude:
   - Gemfile
