@@ -289,3 +289,33 @@ pre {
     padding: 1.5rem;
 }
 
+.return {
+    margin: -3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.025);
+    padding: 1.5rem;
+}
+
+.return p {
+    margin-bottom: 0;
+}
+
+.return em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.left,
+.right {
+    float: left;
+    display: inline-block;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
