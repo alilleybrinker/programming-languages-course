@@ -319,3 +319,8 @@ pre {
     clear: both;
 }
 
+.highlight {
+    background-color: hsla(60, 90%, 93%, 1);
+    font-weight: 700;
+}
+
