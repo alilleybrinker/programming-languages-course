@@ -10,6 +10,9 @@ and the core ideas Rust uses to ensure memory safety without manual
 memory management or garbage collection. These core ideas are
 ownership, borrowing, and lifetimes.
 
+__Today's lab will be accompanied by copious examples in person, so
+be sure to show up on time and follow along as we work through them.__
+
 ### Ownership
 
 __Ownership__ is Rust's core mechanism for ensuring memory safety.
