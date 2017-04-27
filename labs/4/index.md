@@ -15,7 +15,7 @@ be sure to show up on time and follow along as we work through them.__
 
 ### Ownership
 
-__Ownership__ is Rust's core mechanism for ensuring memory safety.
+_Ownership_ is Rust's core mechanism for ensuring memory safety.
 The way that Rust works is that each piece of data has an _owner_,
 and when this owner goes out of scope, Rust knows the data can be
 reclaimed.
