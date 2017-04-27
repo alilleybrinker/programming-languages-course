@@ -319,7 +319,7 @@ pre {
     clear: both;
 }
 
-.highlight {
+.highlight-row {
     background-color: hsla(60, 90%, 93%, 1);
     font-weight: 700;
 }
