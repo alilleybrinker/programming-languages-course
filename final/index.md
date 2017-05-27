@@ -98,11 +98,6 @@ previous reading, quizzes, and labs. These items are in no particular order.
 * What is subtyping?
 * What is width subtyping?
 * What is depth subtyping?
-* What are contracts?
-* What are higher-order contracts?
-* What are immediate contracts?
-* What is observation?
-* What is blame?
 * What are higher-order functions?
 * What is partial application?
 * What is currying?
