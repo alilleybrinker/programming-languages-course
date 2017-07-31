@@ -14,6 +14,8 @@ body {
     color: #222;
     background-color: #e6ebe0;
 
+    padding-top: 4rem;
+
     font-kerning: normal;
     -moz-font-feature-settings: "kern";
     -webkit-font-feature-settings: "kern";
@@ -322,5 +324,22 @@ pre {
 .highlight-row {
     background-color: hsla(60, 90%, 93%, 1);
     font-weight: 700;
+}
+
+.fixed-notice {
+    background-color: #c72f28;
+    color: #fff;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: 1rem;
+}
+
+.fixed-notice p {
+    margin: 0;
 }
 
