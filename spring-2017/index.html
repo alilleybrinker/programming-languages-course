@@ -3,107 +3,192 @@ layout: default
 title: "Home"
 ---
 
-<section id="expectations" class="box">
-    <h2><a href="#expectations">Expectations</a></h2>
+<div class="fixed-notice"><p>This class has ended, but the materials remain useful. Enjoy!</p></div>
 
-    <ol>
-        <li>Attend all class and lab sessions. If you are unable to attend, reach out to me promptly so we can work together to keep you up to speed.</li>
-        <li>Participate in class discussions. This class will be collaborative and explorational, and that is best facilitated when everyone participates. You don't need to do a lot, but share your ideas, and ask questions when you have them.</li>
-        <li>Do the reading before each class. Do the optional reading if you can. You&rsquo;ll get a lot more out of the class with the optional reading.</li>
-        <li>If you have a problem, reach out to me. I am here as a resource to you, and my number one goal is making sure you learn the material and succeed in the course. The sooner you reach out, the better we will be able to address the problem.</li>
-    </ol>
-</section>
+<h1>CSE 320: Programming Languages <span>CSUSB School of Computer Science and Engineering</span></h1>
 
-<section id="meeting-times" class="box">
-    <h2><a href="#meeting-times">Meeting Times</a></h2>
+<p>This is the site for &ldquo;CSE 320: Programming Languages&rdquo; at <a href="http://csusb.edu">CSU, San Bernardino</a>, as taught by <a href="http://andrewbrinker.com">Andrew Brinker</a> in the spring quarter of the 2016&ndash;2017 academic year.</p>
 
-    <div class="content">
-        <p>Classes are held every Tuesday and Thursday from 4:00pm to 5:15pm. Labs are held every Thursday from 5:30pm to 7:20pm.</p>
-    </div>
-</section>
+<div id="table-of-contents" class="box">
+    <h2><a href="#table-of-contents">Table of Contents</a></h2>
 
-<section id="materials" class="box">
-    <h2><a href="#materials">Materials</a></h2>
+    <nav>
+        <ol class="toc columns">
+            <li><a href="#expectations">Expectations</a></li>
+            <li><a href="#meeting-times">Meeting Times</a></li>
+            <li>
+                <a href="#materials">Materials</a>
+                <ol>
+                    <li><a href="#required">Required</a></li>
+                    <li><a href="#optional">Optional</a></li>
+                    <li><a href="#advanced">Advanced</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#structure">Structure</a>
+                <ol>
+                    <li><a href="#class">Class</a></li>
+                    <li><a href="#lab">Lab</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#grading">Grading</a>
+                <ol>
+                    <li><a href="#points">Points</a></li>
+                    <li><a href="#late-work">Late Work</a></li>
+                </ol>
+            </li>
+            <li><a href="#quizzes">Quizzes</a></li>
+            <li>
+                <a href="#labs">Labs</a>
+                <ol>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#organization">Organization</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#project">Project</a>
+                <ol>
+                    <li><a href="#phase-one">Phase One</a></li>
+                    <li><a href="#phase-two">Phase Two</a></li>
+                    <li><a href="#phase-three">Phase Three</a></li>
+                    <li><a href="#presentation">Presentation</a></li>
+                </ol>
+            </li>
+            <li><a href="#final-exam">Final Exam</a></li>
+            <li>
+                <a href="#plagiarism-and-cheating">Plagiarism &amp; Cheating</a>
+                <ol>
+                    <li><a href="#definitions">Definitions</a></li>
+                    <li><a href="#consequences">Consequences</a></li>
+                </ol>
+            </li>
+            <li><a href="#students-with-disabilities">Students with Disabilities</a></li>
+            <li><a href="#accreditation">Accreditation</a></li>
+            <li><a href="#student-organizations">Student Organizations</a></li>
+            <li><a href="#contact-information">Contact Information</a></li>
+        </ol>
+    </nav>
+</div>
+                        </header>
 
-    <div class="content">
+                        <section id="expectations">
+                            <h2><a href="#expectations">Expectations</a></h2>
 
-        <p>This course requires the second edition of <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">&ldquo;Programming Languages: Application and Interpretation&rdquo;</a> by <a href="http://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. This book is available for free online in both <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Portable Document Format">PDF</abbr> formats, and need not be purchased, although you may purchase it if you want to.</p>
+                            <ol>
+                                <li><strong>Attend all class and lab sessions.</strong> If you are unable to attend, reach out to me promptly so we can work together to keep you up to speed.</li>
+                                <li><strong>Participate in class discussions.</strong> This class will be collaborative and explorational, and that is best facilitated when everyone participates. You don't need to do a lot, but share your ideas, and ask questions when you have them.</li>
+                                <li><strong>Do the reading before each class.</strong> Do the optional reading if you can. You&rsquo;ll get a lot more out of the class with the optional reading.</li>
+                                <li><strong>If you have a problem, reach out to me.</strong> I am here as a resource to you, and my number one goal is making sure you learn the material and succeed in the course. The sooner you reach out, the better we will be able to address the problem.</li>
+                            </ol>
+                        </section>
 
-        <p>Before each class, be sure to read any assigned chapters of the book, as well as any additional materials included in the syllabus (this site).</p>
+                        <section id="meeting-times">
+                            <h2><a href="#meeting-times">Meeting Times</a></h2>
+
+                            <div class="content">
+                                <p>Classes are held every Tuesday and Thursday from 4:00pm to 5:15pm. Labs are held every Thursday from 5:30pm to 7:20pm.</p>
+                            </div>
+                        </section>
+
+                        <section id="materials">
+                            <h2><a href="#materials">Materials</a></h2>
+
+                            <div class="content">
+
+                                <h3 id="required"><a href="#required">Required</a></h3>
+
+                                <p>This course requires the second edition of <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">&ldquo;Programming Languages: Application and Interpretation&rdquo;</a> by <a href="http://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. This book is available for free online in both <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Portable Document Format">PDF</abbr> formats, and need not be purchased, although you may purchase it if you want to.</p>
+
+                                <p>Before each class, be sure to read any assigned chapters of the book, as well as any additional materials included in the syllabus (this site).</p>
 
 
-        <p>Each pre-course reading will include optional materials. Questions from these optional materials will be included for extra points in the quizzes given at the start of each class session.</p>
+                                <h3 id="optional"><a href="#optional">Optional</a></h3>
 
-        <p>Some pre-course reading will include links or suggestions for further exploration into the topic at hand. These are entirely for your own personal edification, and will not be required for use in the course.</p>
+                                <p>Each pre-course reading will include optional materials. Questions from these optional materials will be included for extra points in the quizzes given at the start of each class session.</p>
 
-    </div>
-</section>
+                                <h3 id="advanced"><a href="#advanced">Advanced</a></h3>
 
-<section id="structure" class="box">
-    <h2><a href="#structure">Structure</a></h2>
+                                <p>Some pre-course reading will include links or suggestions for further exploration into the topic at hand. These are entirely for your own personal edification, and will not be required for use in the course.</p>
 
-    <div class="content">
+                            </div>
+                        </section>
 
-        <p>This course is organized into two components, a class component and a lab component.</p>
+                        <section id="structure">
+                            <h2><a href="#structure">Structure</a></h2>
 
-        <p>The class component will serve to enable discussion and exploration of the topics covered in reading. To do well in this class, <em>you must do the assigned reading</em>. Students who arrive to class without having done the reading will likely find themselves struggling.</p>
-        <p>Each class session will begin with a quiz whose questions are based on the information covered in the reading assigned after the previous class session. Each quiz will additionally have questions based on any optional reading, for extra points. See the <a href="#grading">Grading</a> section for more information on how these quizzes are graded, and how that grade contributes to your final grade in the course.</p>
+                            <div class="content">
 
-        <p>The lab component will serve to introduce you to a variety of programming languages, to provide practical knowledge about different languages, their underlying paradigms, and how the different decisions the language designers make influence the resulting language.</p>
-        <p>The lab will consist of exercises and programming assignments designed to provide hands-on experience with the given languages and their paradigms.</p>
-    </div>
-</section>
+                                <p>This course is organized into two components, a class component and a lab component.</p>
 
-<section id="grading" class="box">
-    <h2><a href="#grading">Grading</a></h2>
+                                <h3 id="class"><a href="#class">Class</a></h3>
 
-    <div class="content">
+                                <p>The class component will serve to enable discussion and exploration of the topics covered in reading. To do well in this class, <em>you must do the assigned reading</em>. Students who arrive to class without having done the reading will likely find themselves struggling.</p>
+                                <p>Each class session will begin with a quiz whose questions are based on the information covered in the reading assigned after the previous class session. Each quiz will additionally have questions based on any optional reading, for extra points. See the <a href="#grading">Grading</a> section for more information on how these quizzes are graded, and how that grade contributes to your final grade in the course.</p>
 
-        <p>Grading in the course is based on points. There are four ways to get points: quizzes, labs, the course project, and the final. There will be 18 quizzes each worth 5 points, 10 labs each worth 20 points, 1 project worth 110 points, and 1 final worth 100 points.</p>
+                                <h3 id="lab"><a href="#lab">Lab</a></h3>
 
-        <table>
-            <tr>
-                <th>Type</th>
-                <th>Count</th>
-                <th>Points Per Assignment</th>
-                <th>Total</th>
-            </tr>
-            <tr>
-                <td>Quizzes</td>
-                <td>18</td>
-                <td>5</td>
-                <td>90</td>
-            </tr>
-            <tr>
-                <td>Labs</td>
-                <td>10</td>
-                <td>20</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Project</td>
-                <td>1</td>
-                <td>110</td>
-                <td>110</td>
-            </tr>
-            <tr>
-                <td>Final</td>
-                <td>1</td>
-                <td>100</td>
-                <td>100</td>
-            </tr>
-        </table>
+                                <p>The lab component will serve to introduce you to a variety of programming languages, to provide practical knowledge about different languages, their underlying paradigms, and how the different decisions the language designers make influence the resulting language.</p>
+                                <p>The lab will consist of exercises and programming assignments designed to provide hands-on experience with the given languages and their paradigms.</p>
+                            </div>
+                        </section>
 
-        <p>There are a total of 500 points available in this course. Your final grade is based solely on how many points out of 500 you have received. The letter grade breakdown is as follows.</p>
+                        <section id="grading">
+                            <h2><a href="#grading">Grading</a></h2>
 
-        <table>
-            <tr>
-                <th>Grade</th>
-                <th>Percent Range</th>
-                <th>Point Range</th>
-            </tr>
-            <tr>
-                <td>A</td>
+                            <div class="content">
+
+                                <h3 id="points"><a href="#points">Points</a></h3>
+
+                                <p>Grading in the course is based on points. There are four ways to get points: quizzes, labs, the course project, and the final. There will be 18 quizzes each worth 5 points, 10 labs each worth 20 points, 1 project worth 110 points, and 1 final worth 100 points.</p>
+
+                                <table>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Count</th>
+                                        <th>Points Per Assignment</th>
+                                        <th>Total</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Quizzes</td>
+                                        <td>18</td>
+                                        <td>5</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Labs</td>
+                                        <td>10</td>
+                                        <td>20</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Project</td>
+                                        <td>1</td>
+                                        <td>110</td>
+                                        <td>110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Final</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                    </tr>
+                                </table>
+
+                                <h3 id="letter-grades"><a href="#letter-grades">Letter Grades</a></h3>
+
+                                <p>There are a total of 500 points available in this course. Your final grade is based solely on how many points out of 500 you have received. The letter grade breakdown is as follows.</p>
+
+                                <table>
+                                    <tr>
+                                        <th>Grade</th>
+                                        <th>Percent Range</th>
+                                        <th>Point Range</th>
+                                    </tr>
+                                    <tr>
+                                        <td>A</td>
                                     <td><pre>[90%, 100%]</pre></td>
                                     <td><pre>[450, 500]</pre></td>
                                 </tr>
@@ -129,21 +214,25 @@ title: "Home"
                                 </tr>
                             </table>
 
+                            <h3 id="late-work"><a href="#late-work">Late Work</a></h3>
                             <p>Late work is not generally accepted. If special circumstances prevent you from doing an assignment, please contact me promptly so we can discuss potential solutions to the problem.</p>
                         </div>
                     </section>
 
-                    <section id="quizzes" class="box">
+                    <section id="quizzes">
                         <h2><a href="#quizzes">Quizzes</a></h2>
 
                         <p>Each class except for the first and last will begin with a quiz covering the reading assigned at the end of the previous class. These quizzes are worth 5 points each, and with 18 quizzes total (2 classes per week for 10 weeks, minus the first and last class = 18), all the quizzes are together worth 90 points out of the 500 total points in the course.</p>
                         <p>These quizzes will be quick, and should be easy for anyone keeping up with the reading. They will also include a bonus question or two based on the optional reading assigned at the end of the previous class.</p>
                     </section>
 
-                    <section id="labs" class="box">
+                    <section id="labs">
                         <h2><a href="#labs">Labs</a></h2>
 
                         <div class="content">
+
+                            <h3 id="schedule"><a href="#schedule">Schedule</a></h3>
+
                             <table>
                                 <tr>
                                     <th>#</th>
@@ -224,22 +313,31 @@ title: "Home"
                                 </tr>
                             </table>
 
+
+                            <h3 id="goals"><a href="#goals">Goals</a></h3>
+
                             <p>One of the goals of this course is to combat language monoculture. If you as a programmer only use one language, you are only exposed to one way of thinking. The languages we use (whether speaking or programming) shape the ideas we consider and express. Learning more than one programming language is akin to learning more than one spoken language. In doing so, you help to broaden yourself with new perspectives and ways of thinking.</p>
                             <p>It is not expected that you become a strong programmer in each of these languages. Rather, the hope is that the exposure you receive to these languages will pay dividends in improving your understanding of and facility with programming overall. If you happen to like one or more of these languages, and want to explore them further on your own time, do.</p>
 
+                            <h3 id="Organization"><a href="#organization">Organization</a></h3>
+
                             <p>Labs in this class will consist of a series of exercises or a programming assignment in one of the <a href="#languages">four languages being used in the lab</a>. These labs are designed to be reasonably completed within the hour and fifty minutes alloted. For students who finish with extra time and want to explore the languages in question further, additional resources or exercises will often be provided.</p>
                             <p>Lab time is a time for experimentation, discovery, and question-asking (both of yourself and of me). The best way to discover the workings of a programming language is to write in it, and so I highly recommend a sense of playfulness during lab sessions. I will be available for questions, and if more than one or two students has the same question I am happy to answer those questions for the edification of the rest of the students.</p>
+
+                            <h3 id="languages"><a href="#languages">Languages</a></h3>
 
                             <p>The lab is organized into four segments, each using a particular language. These languages were chosen because they best typify the core concepts of the programming paradigm they represent.</p>
                             <p>In these labs we will be using <a href="https://www.haskell.org/">Haskell</a> (to represent functional programming), <a href="https://www.rust-lang.org/en-US/">Rust</a> (to represent structured programming), <a href="https://docs.oracle.com/javase/8/">Java</a> (to represent object-oriented programming), and <a href="http://www.swi-prolog.org/">Prolog</a> (to represent logic programming). These languages are all quite different, and there is enough nuance in each to fill multiple classes. So we will only be spending a few weeks with each.</p>
                         </div>
                     </section>
 
-                    <section id="project" class="box">
+                    <section id="project">
                         <h2><a href="#project">Project</a></h2>
                         <p>The course will include a project to be undertaken in teams of 5 students. Each member of a team will receive the same grade, so make sure to pick team members on whom you can rely.</p>
                         <p>The overall goal for the project is to report on an existing language, and then design a concept for a new programming language. You do not need to implement the language, nor do you need to provide a complete formal specification, but you do need to trace out the concept to a degree sufficient for a technical reader to understand your language, and what sort of semantics should be expected.</p>
                         <p>The project is organized into three phases plus a presentation.</p>
+
+                        <h3 id="phase-one"><a href="#phase-one">Phase One</a></h3>
 
                         <p>In phase one, you must submit a report on an existing programming language that is not in the Top 20 of the TIOBE programming language index at the time the class starts. This means the following languages may not be used for the report:</p>
                         <ul class="columns">
@@ -267,24 +365,31 @@ title: "Home"
                         <p>The phase 1 report is worth 40 points out of the 110 total points for the project. If a report on any of the languages listed above is turned in, it will receive 0 points.</p>
                         <p>The report should detail the language's syntax, semantics, paradigm, design philosophy, and major interesting features.</p>
 
+                        <h3 id="phase-two"><a href="#phase-two">Phase Two</a></h3>
+
                         <p>In phase two, you must submit a report on an original programming language concept developed by the group. This report is a draft report, and will not be graded, but failure to submit a report in phase two will result in the group receiving no points for any submission in phase three.</p>
                         <p>Like in phase one, the report should detail the language's syntax, semantics, paradigm, design philosophy, and major interesting features.</p>
 
+                        <h3 id="phase-three"><a href="#phase-three">Phase Three</a></h3>
+
                         <p>In phase three, you must submit the final draft of the report your group submitted in phase 2. This report is worth 40 points out of the 110 total points for the project.</p>
+
+                        <h3 id="presentation"><a href="#presentation">Presentation</a></h3>
 
                         <p>The final part of the project is for the group to present their finished programming language concept. This presentation is worth 30 points out of the 110 total points for the project.
                         </section>
 
-                        <section id="final-exam" class="box">
+                        <section id="final-exam">
                             <h2><a href="#final-exam">Final Exam</a></h2>
 
                             <p>The final exam will be administered on Thursday, June 15<sup>th</sup> from 4:00pm to 5:50pm, and will cover the entirety of the material covered in class, and will be worth 100 points, out of 500 total for the class. The final exam will be open notes, and I highly recommend putting in some time to review the material prior to the exam.</p>
                             <p>The quizzes taken at the start of each lecture should be a good resource to study in preparation for the exam. You can additionally look over the material in the <a href="{{ site.baseurl }}/final/">study guide</a>.</p>
                         </section>
 
-                        <section id="plagiarism-and-cheating" class="box">
+                        <section id="plagiarism-and-cheating">
                             <h2><a href="#plagiarism-and-cheating">Plagiarism &amp; Cheating</a></h2>
 
+                            <h3 id="definitions"><a href="#definitions">Definitions</a></h3>
                             <p>Plagiarism and cheating are violations of the <a href="https://www.csusb.edu/sites/default/files/Student%20Code%20of%20Conduct.pdf">Student Conduct Code</a> and may be dealt with by both the instructor and the Judicial Affairs Officer. Definition and procedures for addressing cheating and plagiarism are found below. Questions about academic dishonesty and the policy should be addressed to the Office of the Vice President, Student Services. Plagiarism is the act of presenting the ideas and writings of another as one’s own. Cheating is the act of obtaining or attempting to obtain credit for academic work through the use of any dishonest, deceptive, or fraudulent means. Cheating includes but is not limited to:</p>
 
                             <ol>
@@ -297,6 +402,7 @@ title: "Home"
                                 <li>Any other act committed by a student in the course of his or her academic work, which defrauds or misrepresents, including aiding or abetting in any of the actions defined above.</li>
                             </ol>
 
+                            <h3 id="consequences"><a href="#consequences">Consequences</a></h3>
                             <p>Plagiarism is academically dishonest and makes the offending student liable to penalties up to and including expulsion. Students must make appropriate acknowledgements of the original source where material written or compiled by another is used. Procedure. Allegations of academic dishonesty may be handled directly by the instructor or may be referred by the instructor to the Judicial Affairs Officer. If handled by the instructor, the instructor has the following responsibilities:</p>
 
                             <ol>
@@ -317,13 +423,13 @@ title: "Home"
                             <p>If the student does not wish to accept the sanction proposed by the instructor, the student may request and require that the allegation be referred to the Judicial Affairs Officer. In that event, the procedures specified under Executive Order 970 (Student Disciplinary Procedures of the California State University) shall be observed. The instructor shall not impose any sanction other than the sanction(s) imposed through the disciplinary procedure.</p>
                         </section>
 
-                        <section id="students-with-disabilities" class="box">
+                        <section id="students-with-disabilities">
                             <h2><a href="#students-with-disabilities">Students with Disabilities</a></h2>
 
                             <p>If you are in need of an accommodation for a disability in order to participate in this class, please let me know and also contact Services to Students with Disabilities at UH-183, (909) 537-5238.</p>
                         </section>
 
-                        <section id="accreditation" class="box">
+                        <section id="accreditation">
                             <h2><a href="#accreditation">Accreditation</a></h2>
 
                             <p>The following are learning outcomes for the Computer Science program, accredited by ABET This course supports these outcomes.</p>
@@ -343,13 +449,13 @@ title: "Home"
                             </ol>
                         </section>
 
-                        <section id="student-organizations" class="box">
+                        <section id="student-organizations">
                             <h2><a href="#student-organizations">Student Organizations</a></h2>
 
                             <p>It is highly recommended that you become a member of the <a href="https://cse-csusb.org/">CSUSB Computer Science and Engineering Club</a>. The club provides a number of support and enrichment activities, including peer tutoring and talks on current topics in computing. Joining the CSE Club is an excellent way to expand your skills and opportunities as a computer scientist or engineer.</p>
                         </section>
 
-                        <section id="contact-information" class="box">
+                        <section id="contact-information">
                             <h2><a href="#contact-information">Contact Information</a></h2>
 
                             <p>You may contact me via email at <a href="mailto:andrew.brinker@csusb.edu">andrew.brinker@csusb.edu</a> with questions and comments related to the class. Make sure to preface all email subjects with &ldquo;<code>[CSE 320]</code>&rdquo;, to ensure that I will see and respond to your email message.</p>
