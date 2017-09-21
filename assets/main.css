@@ -171,3 +171,7 @@ tr:nth-child(2n+1) {
     column-gap: 1.667rem;
 }
 
+.collapsed {
+    color: #999;
+}
+

@@ -1,0 +1,431 @@
+<section id="reading" class="box">
+    <h2><a href="#reading">Reading</a></h2>
+
+    <div class="content">
+        <h3 id="interpretation"><a href="#interpretation">Interpretation</a></h3>
+
+        <div>
+            <ol>
+                <li><strong>Required:</strong> Chapters 1, 2, 3, and 4 of PLAI. (19 pages). It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Required:</strong> <a href="http://lionelbarrow.com/2014/06/15/how-to-talk-about-progamming-langauges/">How to Talk About Programming Languages</a> by Lionel Barrow.</li>
+
+                <li><strong>Required:</strong> <a href="http://matt.might.net/articles/implementing-a-programming-language/">“7 lines of code, 3 minutes: implement a programming language from scratch”</a> by Matthew Might.</li>
+
+                <li><strong>Optional:</strong> Chapters 4, 5, 6 of <a href="http://www.craftinginterpreters.com/contents.html">“Crafting Interpreters”</a>, by Robert Nystrom.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://www.cs.nott.ac.uk/~pszgmh/pearl.pdf">“Monadic Parsing in Haskell”</a> by Graham Hutton and Erik Meijer.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://blog.reverberate.org/2013/07/ll-and-lr-parsing-demystified.html">“LL and LR Parsing Demystified”</a> by Josh Haberman.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://blog.reverberate.org/2013/09/ll-and-lr-in-context-why-parsing-tools.html">“LL and LR in Context: Why Parsing Tools Are Hard”</a> by Josh Haberman.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://matt.might.net/papers/might2011derivatives.pdf">“Parsing with Derivatives”</a> by Matthew Might.</li>
+
+                <li><strong>Advanced:</strong> <a href="https://pdos.csail.mit.edu/papers/packrat-parsing:icfp02.pdf">“Packrat Parsing: Simple, Powerful, Lazy, Linear Time”</a> by Bryan Ford.</li>
+            </ol>
+        </div>
+
+        <h3 id="functions-1"><a href="#functions-1">Functions 1</a></h3>
+
+        <div>
+            <ol>
+                <li><strong>Required:</strong> Chapters 5 and 6 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Required:</strong> This <a href="https://www.cs.bgu.ac.il/~comp131/wiki.files/ps6.pdf">series of slides</a> about static vs. dynamic scoping.</li>
+
+                <li><strong>Optional:</strong> <a href="http://norvig.com/lispy.html">“(How to Write a (Lisp) Interpreter (in Python))”</a> by Peter Norvig.</li>
+
+                <li><strong>Advanced:</strong> <a href="https://pdfs.semanticscholar.org/c39e/6b0f2715d515f6865be92b02ae99166c43f6.pdf">“Beyond Static and Dynamic Scope”</a> by Eric Tanter.</li>
+            </ol>
+        </div>
+
+        <h3 id="functions-2"><a href="#functions-2">Functions 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What are closures? How are they implemented?</li>
+
+                <li>How do functions and closures relate? Are functions closures? Are closures functions?</li>
+
+                <li>What is the “top-level” of a program?</li>
+
+                <li>What is <em>capture-free substitution</em>? Why is it necessary?</li>
+
+                <li>What is <code>let</code>? How is it defined?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 7 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> Section 2.2.1 of <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/1987/01/slpj-book-1987-small.pdf">“The Implementation of Functional Programming Languages”</a> by Simon Peyton Jones.</li>
+
+                <li><strong>Advanced:</strong> <a href="https://wingolog.org/archives/2016/02/08/a-lambda-is-not-necessarily-a-closure">“A lambda is not (necessarily) a closure”</a> by Andy Wingo.</li>
+            </ol>
+        </div>
+
+        <h3 id="mutation"><a href="#mutation">Mutation</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is a box? What is it used for?</li>
+
+                <li>Why does adding sequencing require the interpreter to take and return the environment?</li>
+
+                <li>What is the "store," and why is it needed? How does adding the store change the environment?</li>
+
+                <li>How does adding state change the semantics of existing operations, like addition and multiplication?</li>
+
+                <li>What is the difference between identifiers and variables?</li>
+
+                <li>What are "call by value" and "call by reference?" What is the difference between them?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 8 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="http://delivery.acm.org/10.1145/150000/143169/p1-wadler.pdf?ip=139.182.209.197&amp;id=143169&amp;acc=ACTIVE%20SERVICE&amp;key=F26C2ADAC1542D74%2EFF5B9E280B0EF46D%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;CFID=750586463&amp;CFTOKEN=91450829&amp;__acm__=1492119381_54f920f2a4cd28ffcfa4fa32107a6792">“The Essence of Functional Programming”</a> by Philip Wadler.</li>
+            </ol>
+        </div>
+
+        <h3 id="recursion"><a href="#recursion">Recursion</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is a recursive data structure?</li>
+
+                <li>What is a cyclic data structure?</li>
+
+                <li>What does it mean for a computation to <em>diverge</em>?</li>
+
+                <li>Why does creating a cyclic datum require a box?</li>
+
+                <li>Why can't you write recursive functions without boxing?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 9 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> Daniel P. Friedman and Matthias Felleisen explaining how to get recursion without explicit state, in <a href="http://www.ccs.neu.edu/home/matthias/BTLS/sample.pdf">this chapter from their book <em>The Little Schemer</em></a>. Note that you will probably need to read this at least twice to understand what they're describing. This is some trippy stuff.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://maartenfokkinga.github.io/utwente/mmf91m.pdf">“Functional Programming with Bananas, Lenses, Envelopes and Barbed Wire”</a> by Erik Meijer (major contributor to C#, Haskell, lead developer of LINQ, one of the guys from the video on the first day of class), Maarten Fokkinga, and Ross Paterson.</li>
+
+                <li><strong>Advanced:</strong> If the above is a bit much, try <a href="http://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/">“An Introduction to Recursion Schemes”</a> by Patrick Thomson, which summarizes the above paper in a more approachable way.</li>
+            </ol>
+        </div>
+
+        <h3 id="objects-1"><a href="#objects-1">Objects 1</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>The relationship between functions and objects.</li>
+
+                <li>How objects require mutation and recursion, to enable access to <code>self</code>.</li>
+
+                <li>How languages can choose to treat names of objects.</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Sections 10.1 and 10.2 and chapter 10 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> Chapters 1, 2, and 3 of <a href="http://users.dcc.uchile.cl/~etanter/ooplai/">“Object-Oriented Programming Languages: Application and Interpretation”</a> by Eric Tanter.</li>
+            </ol>
+        </div>
+
+        <h3 id="objects-2"><a href="#objects-2">Objects 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is the difference between classes and prototypes?</li>
+
+                <li>Why is multiple inheritance considered a bad idea?</li>
+
+                <li>What is the difference between <em>replacing</em> and <em>refining</em> when considering inheritance?</li>
+
+                <li>What are mixins? How do they differ from inheritance?</li>
+
+                <li>How do mixins differ from traits?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Section 10.3 of chapter 10 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> Chapters 4, 5, 6, and 7 of <a href="http://users.dcc.uchile.cl/~etanter/ooplai/">“Object-Oriented Programming Languages: Application and Interpretation”</a> by Eric Tanter.</li>
+            </ol>
+        </div>
+
+        <h3 id="memory-1"><a href="#memory-1">Memory 1</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What does it mean for memory management to be complete and sound?</li>
+
+                <li>What is fragmentation?</li>
+
+                <li>What is a free-list?</li>
+
+                <li>What does it mean to trade space for time?</li>
+
+                <li>What is padding?</li>
+
+                <li>What is reference counting?</li>
+
+                <li>What happens if a reference counting mechanism does not track and break references cycles?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Sections 11.1, 11.2, and 11.3 and chapter 11 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="https://mortoray.com/2012/01/08/what-is-reference-counting/">“What is reference counting?”</a> by Edaqa Mortoray.</li>
+
+                <li><strong>Advanced:</strong> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.30.3952&amp;rep=rep1&amp;type=pdf">“A Semantic Model of Reference Counting and Its Abstraction” by Paul Hudak.</a></li>
+            </ol>
+        </div>
+
+        <h3 id="memory-2"><a href="#memory-2">Memory 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is a <em>root set</em>?</li>
+
+                <li>What does it mean for a variable to <em>live</em>?</li>
+
+                <li>What is the difference between <em>truth</em> and <em>provability</em> computationally?</li>
+
+                <li>What do completeness and soundness mean in the context of garbage collection?</li>
+
+                <li>Why is sound, efficient garbage collection so difficult in C and C++?</li>
+
+                <li>What is conservative garbage collection?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Sections 11.4, 11.5, and 11.6 in chapter 11 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="http://icu-project.org/docs/papers/cpp_report/an_introduction_to_garbage_collection_part_ii.html">“An Introduction to Garbage Collection, Part 2”</a> by Richard Gillam.</li>
+
+                <li><strong>Advanced:</strong> <a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=TKOfDQAAQBAJ&amp;oi=fnd&amp;pg=PR3&amp;dq=garbage+collection&amp;ots=-4FxYzsVAj&amp;sig=4jVt_Mxk9gO4B_sIFdrFEB0Dp2s#v=onepage&amp;q=garbage%20collection&amp;f=false">“The Garbage Collection Handbook: The Art of Automatic Memory Management”</a> by Richard Jones, Anthony Hosking, and Eliot Moss.</li>
+            </ol>
+        </div>
+
+        <h3 id="representation-1"><a href="#representation-1">Representation 1</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is "representation"?</li>
+
+                <li>What happens when a language's features are mapped directly to equivalent host language features?</li>
+
+                <li>What are the pros and cons of using existing host language features to represent your language features?</li>
+
+                <li>What are two ways the book gives to represent closures?</li>
+
+                <li>What are two ways the book gives to represent the environment?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 12 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="https://wingolog.org/archives/2016/02/08/a-lambda-is-not-necessarily-a-closure">“A lambda is not (necessarily) a closure”</a> by Andy Wingo. This is an interesting example of a representation decision in a real programming language. Astute observers will also notice that this had previously been assigned as an advanced reading a few weeks ago. Hopefully it's more approachable now!</li>
+            </ol>
+        </div>
+
+        <h3 id="representation-2"><a href="#representation-2">Representation 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is a macro?</li>
+
+                <li>What is macro expansion?</li>
+
+                <li>What is the type of a macro? (Put another way, a macro is a function from what to what?)</li>
+
+                <li>What is <code>#'</code> in a Racket program?</li>
+
+                <li>What are guards, and why are they useful?</li>
+
+                <li>Why should you not copy code?</li>
+
+                <li>What is macro hygiene, and why is it good?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 13 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="http://letoverlambda.com/index.cl/guest/chap3.html">Chapter 3 of “Let Over Lambda”</a> by Doug Hoyte.</li>
+            </ol>
+        </div>
+
+        <h3 id="control-flow-1"><a href="#control-flow-1">Control Flow 1</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What does it mean that the HTTP protocol is "stateless"?</li>
+
+                <li>What are continuations?</li>
+
+                <li>What is continuation-passing style?</li>
+
+                <li>What is the difference between static and dynamic continuations?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 14 of PLAI. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> <a href="http://matt.might.net/articles/by-example-continuation-passing-style/">“By example: Continuation-passing style in JavaScript”</a> by Matthew Might.</li>
+            </ol>
+        </div>
+
+        <h3 id="control-flow-2"><a href="#control-flow-2">Control Flow 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is a generator?</li>
+
+                <li>What is the relationship between continuations and the program stack?</li>
+
+                <li>What are tail calls?</li>
+
+                <li>How do continuations relate to exceptions?</li>
+
+                <li>What are cooperative and preemptive multitasking?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Read chapter 14 of PLAI again. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Optional:</strong> Reread <a href="http://matt.might.net/articles/by-example-continuation-passing-style/">“By example: Continuation-passing style in JavaScript”</a> by Matthew Might.</li>
+            </ol>
+        </div>
+
+        <h3 id="types-1"><a href="#types-1">Types 1</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What is static type checking?</li>
+
+                <li>What is the type environment?</li>
+
+                <li>Does introducing types change the semantics of a language?</li>
+
+                <li>What is strong normalization?</li>
+
+                <li>How do desugaring/macros work with type checking?</li>
+
+                <li>What does it mean for a type to be invariant across mutation?</li>
+
+                <li>What is a type system?</li>
+
+                <li>What does it mean for a type system to be sound?</li>
+
+                <li>What are progress and preservation?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 15 of PLAI from the start to 15.3. It is highly recommend to do the exercises in the book.</li>
+
+                <li><strong>Advanced:</strong> “Types and Programming Languages” by Benjamin Pierce. A really excellent book, and the best introductio to this subject.</li>
+            </ol>
+        </div>
+
+        <h3 id="types-2"><a href="#types-2">Types 2</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What are type variables?</li>
+
+                <li>What is parametric polymorphism?</li>
+
+                <li>What is predicative polymorphism?</li>
+
+                <li>What is impredicative polymorphism?</li>
+
+                <li>What is relational parametricity?</li>
+
+                <li>What is type inference?</li>
+
+                <li>What is constraint generation and what is it for?</li>
+
+                <li>What is unification?</li>
+
+                <li>What does it mean for a program's types to be under-constrained and over-constrained?</li>
+
+                <li>What are the principal types of an expression?</li>
+
+                <li>What is <code>let</code>-polymorphism?</li>
+            </ul>
+
+            <ol>
+                <li>Chapter 15 of PLAI from the start of 15.3 to the end of 15.3.2.3 (stop at the start of 15.3.3). It is highly recommend to do the exercises in the book.</li>
+            </ol>
+        </div>
+
+        <h3 id="types-3"><a href="#types-3">Types 3</a></h3>
+
+        <div>
+            <p>The focus in this reading should be on the following concepts:</p>
+
+            <ul>
+                <li>What are tagged union types?</li>
+
+                <li>What are untagged union types?</li>
+
+                <li>What is soft typing?</li>
+
+                <li>What does it mean for a type system to be nominal?</li>
+
+                <li>What does it mean for a type system to be structural?</li>
+
+                <li>What are intersection types?</li>
+
+                <li>Why do recursive type signatures require a special constructor?</li>
+
+                <li>What is subtyping?</li>
+
+                <li>What is width subtyping?</li>
+
+                <li>What is depth subtyping?</li>
+            </ul>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 15 of PLAI from the start of 15.3.3 to the end of chapter 15. It is highly recommend to do the exercises in the book.</li>
+            </ol>
+        </div>
+
+        <h3 id="types-review"><a href="#types-review">Types Review</a></h3>
+
+        <div>
+            <p>This is a review of the last three readings. Focus on the materials outlined in those readings.</p>
+
+            <ol>
+                <li><strong>Required:</strong> Chapter 15 of PLAI. It is highly recommend to do the exercises in the book.</li>
+            </ol>
+        </div>
+    </div>
+</section>
