@@ -14,7 +14,7 @@ body {
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-    background-color: #fff;
+    background-color: #eee;
     color: #000;
 }
 
@@ -26,7 +26,7 @@ strong {
     font-weight: 600;
 }
 
-pre {
+table pre {
     padding: 0;
     margin: 0;
 }
@@ -54,10 +54,9 @@ h6,
 p,
 ol,
 ul,
-table,
-.box {
+table {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.667rem;
 }
 
 h1 a,
@@ -70,7 +69,7 @@ h6 a {
     text-decoration: none;
 }
 
-h1 { font-size: 1rem; font-weight: 900; }
+h1 { font-size: 2.779rem; font-weight: 900; }
 h2 { font-size: 1rem; font-weight: 700; }
 h3 { font-size: 1rem; font-weight: 600; }
 h4 { font-size: 1rem; }
@@ -84,6 +83,22 @@ h4,
 h5,
 h6 {
     line-height: 1.667em;
+}
+
+h2 a {
+    display: block;
+}
+
+h2 a::after {
+    content: " ↓";
+}
+
+h2 a.collapsed {
+    color: #999;
+}
+
+h2 a.collapsed::after {
+    content: " ↑";
 }
 
 table {
@@ -119,37 +134,37 @@ tr:nth-child(2n+1) {
 }
 
 .container {
-    width: 40rem;
-    margin: 5.001rem;
-    background-color: #fff;
-}
-
-.box {
-    padding: 0;
+    width: 50rem;
+    margin: 3.334rem auto;
+    padding: 3.334rem;
     padding-bottom: 1.667rem;
+    background-color: #fff;
+    border: 2px solid #000;
 }
 
 .toc {
-    border: 2px solid #000;
+    background-color: #f7f7f7;
     padding: 1.667rem;
     padding-left: 3.334rem;
-    display: inline-block;
+    padding-right: 3.334rem;
+    margin-left: -3.334rem;
+    margin-right: -3.334rem;
+    list-style-position: inside;
 }
 
 .header {
-    padding-top: 5.001rem;
-    margin-bottom: 5.001rem;
+    margin-bottom: 1.667rem;
 }
 
 .columns {
     display: block;
     max-height: 20rem;
 
-    -moz-column-count: 2;
-    -moz-column-gap: 1.5rem;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.667rem;
     -webkit-column-count: 3;
-    -webkit-column-gap: 1.5rem;
+    -webkit-column-gap: 1.667rem;
     column-count: 3;
-    column-gap: 1.5rem;
+    column-gap: 1.667rem;
 }
 
