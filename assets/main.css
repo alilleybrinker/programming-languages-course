@@ -36,6 +36,10 @@ ul {
     padding-left: 3.334rem;
 }
 
+code {
+    background-color: #eee;
+}
+
 em {
     font-style: normal;
     background-color: #dedede;
